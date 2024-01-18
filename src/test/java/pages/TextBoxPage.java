@@ -6,14 +6,12 @@ import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TextBoxPage {
-     private
-       SelenideElement
-            userNameInput=$("#userName"),
-            userEmailInput = $("#userEmail"),
-            currentAddressInput=$("#currentAddress"),
-            permanentAddressInput=$("#permanentAddress"),
-            submitButton=$("#submit"),
-            output=$("#output");
+     private SelenideElement userNameInput=$("#userName"),
+                             userEmailInput = $("#userEmail"),
+                             currentAddressInput=$("#currentAddress"),
+                             permanentAddressInput=$("#permanentAddress"),
+                             submitButton=$("#submit"),
+                             output=$("#output");
     public TextBoxPage openPageTextBox() {
         open("/text-box");
         executeJavaScript("$('#fixedban').remove()");
