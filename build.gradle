@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+}
+group = 'qaguru.belavina'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            'com.codeborne:selenide:7.0.4',
+            'org.junit.jupiter:junit-jupiter:5.10.0',
+           'org.slf4j:slf4j-simple:2.0.7'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
