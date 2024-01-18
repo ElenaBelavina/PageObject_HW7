@@ -22,6 +22,6 @@ public class RegistrationWithPObjMinTests extends TestBase {
                 .checkResult("Gender", "Female")
                 .checkResult("Mobile","9031230099");
 
-        sleep(5000);
+       // sleep(5000);
     }
 }
