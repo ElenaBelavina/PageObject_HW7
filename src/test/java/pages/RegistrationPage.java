@@ -10,36 +10,38 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class RegistrationPage {
-     private
-
-
-     SelenideElement firstNameInput = $("#firstName"),
-                     lastNameInput = $("#lastName"),
-                     userNameInput=$("#userName"),
-                     userEmailInput = $("#userEmail"),
-                     genderWrapper = $("#genterWrapper"),
-                     userNumberInput = $("#userNumber"),
-                     calendarInput = $("#dateOfBirthInput"),
-                     subjectsInput = $("#subjectsInput"),
-                     hobbiesWrapper = $("#hobbiesWrapper"),
-                     uploadPict=$("#uploadPicture"),
-                     currentAddressInput=$("#currentAddress"),
-                     permanentAddressInput=$("#permanentAddress"),
-                     stateInput=$("#state"),
-                     cityInput=$("#city"),
-                     stateCityWrapperInput=$("#stateCity-wrapper"),
-                     submitButton=$("#submit");
+     private SelenideElement firstNameInput = $("#firstName"),
+                             lastNameInput = $("#lastName"),
+                             userEmailInput = $("#userEmail"),
+                             genderWrapper = $("#genterWrapper"),
+                             userNumberInput = $("#userNumber"),
+                             calendarInput = $("#dateOfBirthInput"),
+                             subjectsInput = $("#subjectsInput"),
+                             hobbiesWrapper = $("#hobbiesWrapper"),
+                             uploadPict=$("#uploadPicture"),
+                             currentAddressInput=$("#currentAddress"),
+                             permanentAddressInput=$("#permanentAddress"),
+                             stateInput=$("#state"),
+                             cityInput=$("#city"),
+                             stateCityWrapperInput=$("#stateCity-wrapper"),
+                             submitButton=$("#submit");
 
     CalendarComponent calendarComponent = new CalendarComponent();
+
     public RegistrationPage openPage() {
         open("/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
+
+        return this;
+    }
+    public RegistrationPage closeBanners() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
         return this;
     }
-      public RegistrationPage setFirstName(String value) {
+
+    public RegistrationPage setFirstName(String value) {
         firstNameInput.setValue(value);
 
         return this;
