@@ -59,7 +59,6 @@ public class RegistrationWithPageObjectsTests extends TestBase {
     @Test
     void registrationNegativeTest(){
         registrationPage.openPage().closeBanners()
-                        .setFirstName("Alex")
                         .setLastName("Petrov")
                         .setEmail("petrov@mail.ru")
                         .setGender("Male")
@@ -75,7 +74,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                         .setCity("Gurgaon")
                         .submit();
 
-        registrationPage.checkResult("Student Name", "Alexey Petrov") // не совпадает имя
+        registrationPage.checkResult("Student Name", "Alex Petrov")
                         .checkResult("Student Email", "petrov@mail.ru")
                         .checkResult("Gender", "Male")
                         .checkResult("Mobile","9031235577")
