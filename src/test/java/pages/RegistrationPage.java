@@ -24,7 +24,8 @@ public class RegistrationPage {
                              stateInput=$("#state"),
                              cityInput=$("#city"),
                              stateCityWrapperInput=$("#stateCity-wrapper"),
-                             submitButton=$("#submit");
+                             submitButton=$("#submit"),
+                             modalDialog=$(".modal-dialog");
 
     CalendarComponent calendarComponent = new CalendarComponent();
 
@@ -123,8 +124,13 @@ public class RegistrationPage {
         return this;
     }
     public RegistrationPage checkResult(String key, String value) {
-      ResultTable.checkResults(key,value);
+        ResultTable.checkResults(key,value);
 
         return this;
     }
+      public RegistrationPage checkModalDialog() {
+        modalDialog.shouldNot(appear);
+        return this;
+    }
+
 }
