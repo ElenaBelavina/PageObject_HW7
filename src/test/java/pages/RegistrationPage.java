@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import pages.components.CalendarComponent;
 import pages.components.ResultTable;
 
+import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -128,9 +129,13 @@ public class RegistrationPage {
 
         return this;
     }
+
+ 
+
       public RegistrationPage checkModalDialog() {
         modalDialog.shouldNot(appear);
         return this;
     }
 
 }
+
