@@ -93,3 +93,4 @@ public class RegistrationRemoteTests {
                     text("alex@egorov.com"), text("1234567890"));
         });
     }
+}
