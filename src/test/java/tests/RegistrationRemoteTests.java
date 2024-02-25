@@ -24,30 +24,25 @@ public class RegistrationRemoteTests {
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-//        Configuration.browser = "chrome";
         Configuration.timeout = 10000;
-//        Configuration.holdBrowserOpen = true;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
-//        Configuration.browserCapabilities = capabilities;
-//
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true
+        ));
+        Configuration.browserCapabilities = capabilities;
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @AfterEach
-//    void afterEach() {
-//        Selenide.closeWebDriver();
-//    }
     void addAttachments() {
         Attach.screenshotAs("Скриншот в конце теста");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-//        Attach.addVideo();
+        Attach.addVideo();
 
         Selenide.closeWebDriver();
     }
