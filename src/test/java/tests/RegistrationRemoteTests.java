@@ -18,6 +18,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+@DisplayName("Урок 13. Работа с Jenkins")
+
 public class RegistrationRemoteTests {
 
     @BeforeAll
