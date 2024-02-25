@@ -59,7 +59,8 @@ public class RegistrationWithPageObjectsTests extends TestBase {
     @Test
     void registrationNegativeTest(){
         registrationPage.openPage().closeBanners()
-                        //.setFirstName("Alex")  //не заполняем имя
+
+                      //.setFirstName("Alex")  //не заполняем имя
                         .setLastName("Petrov")
                         .setEmail("petrov@mail.ru")
                         .setGender("Male")
@@ -75,7 +76,8 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                         .setCity("Gurgaon")
                         .submit();
 
-        registrationPage.checkModalDialog();
+
+       registrationPage.checkModalDialog();
 
          //sleep(5000);
     }

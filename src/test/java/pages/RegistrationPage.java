@@ -125,14 +125,17 @@ public class RegistrationPage {
         return this;
     }
     public RegistrationPage checkResult(String key, String value) {
-      ResultTable.checkResults(key,value);
+        ResultTable.checkResults(key,value);
 
         return this;
     }
 
-    public RegistrationPage checkModalDialog() {
+ 
+
+      public RegistrationPage checkModalDialog() {
         modalDialog.shouldNot(appear);
-          return this;
+        return this;
     }
 
 }
+
