@@ -44,9 +44,9 @@ public class RegistrationRemoteTests {
 //        Selenide.closeWebDriver();
 //    }
     void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-//        Attach.pageSource();
-//        Attach.browserConsoleLogs();
+        Attach.screenshotAs("Скриншот в конце теста");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
 //        Attach.addVideo();
 
         Selenide.closeWebDriver();
