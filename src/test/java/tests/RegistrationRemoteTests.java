@@ -40,14 +40,16 @@ public class RegistrationRemoteTests {
     }
 
     @AfterEach
-    void afterEach() {
-        Selenide.closeWebDriver();
-    }
+//    void afterEach() {
+//        Selenide.closeWebDriver();
+//    }
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
 //        Attach.pageSource();
 //        Attach.browserConsoleLogs();
 //        Attach.addVideo();
+
+        Selenide.closeWebDriver();
     }
 
     @Test
