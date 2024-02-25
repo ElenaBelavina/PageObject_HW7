@@ -76,8 +76,16 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                         .setCity("Gurgaon")
                         .submit();
 
-
-       registrationPage.checkModalDialog();
+        registrationPage.checkResult("Student Name", "Alexey Petrov") // не совпадает имя
+                        .checkResult("Student Email", "petrov@mail.ru")
+                        .checkResult("Gender", "Male")
+                        .checkResult("Mobile","9031235577")
+                        .checkResult("Date of Birth","26 September,1995")
+                        .checkResult("Subjects","English, Biology, History")
+                        .checkResult("Hobbies","Sports")
+                        .checkResult("Picture","giraffe.jpeg")
+                        .checkResult("Address","Moscow city")
+                        .checkResult("State and City","NCR Gurgaon");
 
          //sleep(5000);
     }

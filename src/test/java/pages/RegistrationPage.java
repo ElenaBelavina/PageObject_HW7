@@ -130,7 +130,7 @@ public class RegistrationPage {
         return this;
     }
 
- 
+
 
       public RegistrationPage checkModalDialog() {
         modalDialog.shouldNot(appear);
