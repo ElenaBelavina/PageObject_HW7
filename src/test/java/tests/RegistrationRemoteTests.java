@@ -37,7 +37,7 @@ public class RegistrationRemoteTests {
 //                "enableVideo", true
 //        ));
 //        Configuration.browserCapabilities = capabilities;
-
+//
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
@@ -93,4 +93,3 @@ public class RegistrationRemoteTests {
                     text("alex@egorov.com"), text("1234567890"));
         });
     }
-}
